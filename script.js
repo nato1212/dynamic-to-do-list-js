@@ -10,9 +10,13 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   // Add a new task
-  function addTask(taskText, save = true) {
-    // If the task text is empty, alert the user
-    if (!taskText.trim()) {
+  // Add a new task
+  function addTask(save = true) {
+    // Retrieve and trim the value from the task input field
+    const taskText = taskInput.value.trim();
+
+    // Check if taskText is empty
+    if (!taskText) {
       alert("Please enter a task.");
       return;
     }
